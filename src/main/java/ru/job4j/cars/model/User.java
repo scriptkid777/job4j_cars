@@ -1,20 +1,16 @@
 package ru.job4j.cars.model;
 
-
-import lombok.AllArgsConstructor;
 import lombok.Data;
-import lombok.NoArgsConstructor;
-
+import lombok.EqualsAndHashCode;
 import javax.persistence.*;
 
-@Entity
-@Table(name = "users")
 @Data
-
-@NoArgsConstructor
-@AllArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@Entity
+@Table(name = "auto_user")
 public class User {
     @Id
+    EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String login;
