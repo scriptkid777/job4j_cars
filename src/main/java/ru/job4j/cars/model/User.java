@@ -10,9 +10,9 @@ import javax.persistence.*;
 @Table(name = "auto_user")
 public class User {
     @Id
-    EqualsAndHashCode.Include
+    @EqualsAndHashCode.Include
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String login;
     private String password;
 }
